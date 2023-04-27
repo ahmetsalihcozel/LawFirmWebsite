@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Proje Adı: Özdemir Avukatlık Web Sitesi
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bu proje, React kullanarak oluşturduğum bir web sitesidir. Özdemir Avukatlık isimli bir hukuk firmasına aittir. Bu web sitesi, hukuk firmasının sunduğu hizmetleri ve çalışanları tanıtmak için tasarlanmıştır.
+<br>
+<br>
 
-## Available Scripts
+# Proje Özellikleri
+<br>
 
-In the project directory, you can run:
+## Ana Bileşen: App.js ve Yükleme Ekranı
+<br>
 
-### `npm start`
+![Alt Text](./gifs/loadingbar.gif)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+App componenti, web sitesinin ana componentidir. Bu component ile web sitesinin tüm alt componentleri bir araya getirilerek bir bütün haline getirilmektedir. Kodda, React, Bootstrap ve CSS kullanılmıştır. Kodda, öncelikle web sitesinin diğer componentleri import edilmiştir. Bunlar Navbar, Services, Parallax, Team, Contact, Portfolio ve Sidebar componentleridir. Sonra, App componenti bir class component olarak tanımlanmıştır. Bu componentin constructorında bir state tanımlanmıştır. Bu state, isLoading adında bir boolean değer içermektedir. Bu değer, web sitesinin yüklenme durumunu belirtmektedir. ComponentDidMount metodunda ise bir setTimeout fonksiyonu ile 2.5 saniye sonra isLoading değeri false olarak değiştirilmektedir. Bu sayede, web sitesinin yüklenmesi için bir loading bar gösterilmektedir. Loading bar elementi içinde avukatlık bürosunun logosu, adı ve bir loading bar inner elementi yer almaktadır. Render metodunda ise web sitesinin tüm alt componentleri sırasıyla div elementleri içinde yerleştirilmiştir. App componenti, web sitesinin tüm alt componentlerini yöneten ve koordine eden bir componenttir.
+<br>
+<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Navbar: Ana menü
+<br>
 
-### `npm test`
+![Alt Text](./gifs/navbar.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ Navbar componenti, web sitesinin üst kısmında yer alan ve web sitesinin diğer bölümlerine kolayca erişim sağlayan bir componenttir. Bu component ile web sitesinin kullanıcı dostu ve şık bir tasarıma sahip olması amaçlanmıştır. Kodda, React, Bootstrap ve CSS kullanılmıştır. Kodda, web sitesinin logosu ve adını içeren bir navbar-brand elementi tanımlanmıştır. Bu elemente tıklandığında, web sitesinin ana sayfasına yönlendirilmektedir. Ayrıca, navbar-collapse elementi ile web sitesinin portfolyo, hakkımızda, hizmetlerimiz ve iletişim bölümlerine giden bağlantılar oluşturulmuştur. Bu bağlantılar, navbar-nav elementi içinde yer almaktadır. Navbar componenti, web sitesinin profesyonel ve kullanışlı görünmesine katkıda bulunmaktadır.
+ <br>
+ <br>
 
-### `npm run build`
+## Parallax: Görsel Zenginleştirme
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Alt Text](./gifs/parallax.gif)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ Parallax componenti, web sitesinin görsel açıdan çarpıcı ve ilgi çekici olmasını sağlayan bir componenttir. Bu component ile web sitesinin ana sayfasında bir paralaks efekti oluşturulmuştur. Paralaks efekti, arka planın ön plandakilerden daha yavaş hareket etmesiyle oluşan bir optik yanılsamadır. Bu sayede, web sitesine derinlik ve hareket katılmıştır. Kodda, React Hooks, CSS ve JavaScript kullanılmıştır. Kodda, useRef ve useEffect hookları ile paralaks efektini gerçekleştiren bir fonksiyon tanımlanmıştır. Bu fonksiyon, window.scrollY değerine göre arka planın ve ön plandaki resimlerin konumlarını değiştirmektedir. Ön plandaki resimler arasında adalet tanrıçası, mahkeme çekici ve masa bulunmaktadır. Ayrıca, web sitesinin adını ve sloganını içeren bir metin de ön planda yer almaktadır. Parallax componenti, web sitesinin dinamik ve modern görünmesine katkıda bulunmaktadır.
+ <br>
+ <br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Services: Hukuk Firmasının Sunduğu Hizmetlerin Listesi
+<br>
 
-### `npm run eject`
+![Alt Text](./gifs/services.gif)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ Services componenti, web sitesinin en önemli bölümlerinden biridir. Bu component ile avukatlık bürosunun sunduğu hizmetlerin çeşitliliği ve kalitesi gözler önüne serilmektedir. Kodda, hizmetlerin başlıkları, ikonları ve içerikleri bir dizi olarak tanımlanmıştır. Bu dizi, map fonksiyonu ile ServiceCard componentine gönderilerek, her bir hizmet için dinamik bir şekilde bir kart oluşturulmuştur. Kartların tasarımında Bootstrap ve CSS kullanılmıştır. Kartlara tıklandığında, hizmetin detaylarını gösteren bir modal açılmaktadır. Modal için React-Bootstrap kütüphanesinden Modal componenti kullanılmıştır. Modal içinde hizmetin başlığı, resmi ve içeriği yer almaktadır. İçerikte, hizmetin kapsamı ve sunulan danışmanlık hizmetlerinin listesi bulunmaktadır. Bu sayede, potansiyel müşterilerin ilgisini çekmek ve onlara güven vermek amaçlanmıştır. Services componenti, web sitesinin profesyonel ve etkileyici görünmesine katkıda bulunmaktadır.
+ <br>
+ <br>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Team: Hukuk Firmasında Çalışanların Tanıtımı
+<br>
+Team componenti, web sitesinin avukatlık bürosunun kurucusu ve çalışanlarını tanıtan bir componenttir. Bu component ile web sitesinin güvenilir ve deneyimli bir ekibe sahip olduğu vurgulanmaktadır.
+<br>
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contact: İletişim Bilgileri
+<br>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Alt Text](./gifs/contact.gif)
 
-## Learn More
+ Contact componenti, web sitesinin avukatlık bürosu ile iletişime geçmek isteyen potansiyel müşterilere kolaylık sağlayan bir componenttir. Bu component ile web sitesinin erişilebilir ve müşteri odaklı bir hizmet verdiği belirtilmektedir. Kodda, React, Bootstrap, CSS ve Google Maps API kullanılmıştır. Kodda, iletişim bölümünün başlığı ve alt başlığı tanımlanmıştır. Sonra, avukatlık bürosunun e-posta, adres, sabit hat ve cep numarası gibi iletişim bilgileri bir dizi olarak tanımlanmıştır. Bu dizi, map fonksiyonu ile div elementleri içinde gösterilmiştir. Ayrıca, e-posta, WhatsApp ve arama gibi etkileşimli logolar da tanımlanmıştır. Bu logolara tıklandığında, ilgili uygulamalara yönlendirilmektedir. Bunların yanında, avukatlık bürosunun konumunu gösteren bir Google Maps haritası da iframe elementi ile yerleştirilmiştir. Contact componenti, web sitesinin müşterilerine kolay ve hızlı bir şekilde ulaşma imkanı sunduğunu göstermektedir.
+<br>
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Portfolio: Hukuk Firmasının Tecrübesi
+<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Alt Text](./gifs/portfolio.gif)
 
-### Code Splitting
+Portfolio componenti, web sitesinin avukatlık bürosunun sunduğu hizmetlerin kapsamını ve tecrübesini gösteren bir componenttir. Bu component ile web sitesinin geniş bir hukuk alanında uzmanlaşmış ve başarılı bir çalışma geçmişine sahip olduğu ifade edilmektedir. Sonra, avukatlık bürosunun sunduğu hizmetlerin adları ve ilgili resimleri bir dizi olarak tanımlanmıştır. Ayrıca, bu componentte her bir hizmetin verilen sayısı da bir project-count elementi ile gösterilmektedir. Bu sayılar, useEffect hooku ile scroll eventine bağlı olarak artarak belirlenen değere ulaşmaktadır. Portfolio componenti, web sitesinin etkileyici ve güven verici bir portfolyoya sahip olduğunu göstermektedir.
+<br>
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Sidebar: Sayfa İçinde İletişim İçin Erişim Kolaylığı
+<br>
 
-### Analyzing the Bundle Size
+![Alt Text](./gifs/sidebar.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+ SideBar componenti, web sitesinin sağ alt köşesinde yer alan ve web sitesinin avukatlık bürosu ile iletişime geçmek için alternatif bir yol sunan bir componenttir. Bu component ile web sitesinin her zaman ulaşılabilir ve yardıma hazır olduğu gösterilmektedir. Kodda, React, Bootstrap ve CSS kullanılmıştır. Kodda, iletişim yazısını içeren bir button elementi tanımlanmıştır. Bu buttona tıklandığında, offcanvas elementi ile bir sidebar açılmaktadır. Sidebar içinde, e-posta, WhatsApp ve arama gibi etkileşimli logolar yer almaktadır. Bu logolara tıklandığında, ilgili uygulamalara yönlendirilmektedir. SideBar componenti, web sitesinin müşterilerine kolay ve hızlı bir şekilde ulaşma imkanı sunduğunu göstermektedir.
+<br>
+<br>
 
-### Making a Progressive Web App
+## Gereksinimler
+Bu projenin çalışması için aşağıdaki gereksinimlerin yüklü olması gerekmektedir:
+- Node.js
+- React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Kaynaklar
+Bu proje, avukatlık bürosunun hizmetlerini, portfolyosunu, ekibini ve iletişim bilgilerini gösteren modern ve profesyonel bir web sitesi oluşturmak için aşağıdaki teknolojileri kullanarak geliştirilmiştir:
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [React.js](https://reactjs.org/docs/getting-started.html): Bir JavaScript kütüphanesi olarak web arayüzlerini oluşturmak için kullanılmıştır. React.js, web sitesinin performansını ve kullanıcı deneyimini artırmak için bileşen tabanlı bir yapı sunar. Bu sayede web sitesinin içeriği ve tasarımı kolayca yönetilebilir ve güncellenebilir.
+- [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/): Bir CSS çatısı olarak web sitesinin tasarımını ve duyarlılığını sağlamak için kullanılmıştır. Bootstrap, web sitesinin farklı cihaz ve ekran boyutlarında uyumlu ve estetik görünmesini sağlar. Ayrıca, Bootstrap, web sitesine animasyon, modal, offcanvas gibi çeşitli özellikler eklemek için hazır bileşenler sunar.
+- [Google Maps API](https://developers.google.com/maps/documentation): Bir web servisi olarak web sitesinde harita göstermek ve konum bilgisi vermek için kullanılmıştır. Google Maps API, web sitesine interaktif ve güncel bir harita eklemek için kolay bir yöntem sağlar. Bu sayede, web sitesi ziyaretçileri avukatlık bürosunun adresini kolayca bulabilir ve yol tarifi alabilirler.

@@ -1,0 +1,500 @@
+.parallax {
+  position:sticky;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('./img/library3.png');
+  background-position: center center;
+  background-size: cover;
+  background-color: black;
+  z-index: 1;
+}
+
+@media screen and (max-height: 880px) {
+  #justice-woman {
+    scale: 0.9;
+  }
+  #hammer {
+    scale: 0.9;
+  }
+}
+
+@media screen and (max-height: 680px) {
+  #justice-woman {
+    scale: 0.8;
+  }
+  #hammer {
+    scale: 0.8;
+  }
+}
+
+@media screen and (max-height: 480px) {
+  #justice-woman {
+    scale: 0.6;
+  }
+  #hammer {
+    scale: 0.6;
+  }
+}
+
+@media screen and (max-height: 380px) {
+  #justice-woman {
+    scale: 0.5;
+  }
+  #hammer {
+    scale: 0.5;
+  }
+}
+
+
+@media screen and (max-width: 1920px) {
+  #justice-woman {
+    left: 0%;
+  }
+  .aboutSection {
+    background-image: url('./img/collumns.png');
+    background-color: #F4EEE0;
+  }
+  .logoText{
+    bottom: 87px;
+  }
+  .textStyleP{
+    color: white;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #justice-woman {
+    left: 20%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+    #justice-woman {
+    left: 20%;
+  }
+  .logoText{
+    bottom: 77px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .parallax {
+    background-position: bottom;
+  }
+  #justice-woman {
+    left: 30%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #justice-woman {
+    left: 40%;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  #justice-woman {
+    left: 50%;
+  }
+  .aboutSection {
+    background-image: none;
+    background-color: #F4EEE0;
+  }
+  .textStyleP{
+    color: #282A3A;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #justice-woman {
+    left: 60%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #justice-woman {
+    left: 80%;
+  }
+}
+
+
+#text {
+  position: relative;
+  justify-content: center;
+  font-size: 4em;
+  font-family: "Pinyon_Script", sans-serif;
+  font-family: PinyonFont;
+  color: #e2b24c;
+  z-index: 1110;
+  padding: 5px;
+  text-shadow: 5px 0 #282A3A, -5px 0 #282A3A, 0 5px #282A3A, 0 -5px #282A3A,
+  5px 5px #282A3A, -5px -5px #282A3A, 5px -5px #282A3A, -5px 5px #282A3A;
+  line-height: 1.6;
+}
+
+#justice-woman {
+  height: 800px;
+  width: 400px; 
+  position:relative; 
+  z-index: 1100;
+  margin-bottom: -40vh;
+}
+
+
+#hammer {
+  height: 300px;
+  width: 750px;
+  position:relative;
+  right: -20%;
+  top: 47vh;
+  z-index: 4;
+}
+
+#table {
+  position: absolute ;
+  height: 350px;
+  width: 1920px;
+  top: 95vh;
+  z-index: 3;
+  filter: drop-shadow(25px 25px 25px gray);
+}
+
+
+@font-face {
+  font-family: PinyonFont;
+  src: url(PinyonScript-Regular.ttf);
+}
+
+
+.front, .back {
+  border-radius: 2em;
+  backface-visibility: hidden;
+  position: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card {
+  backface-visibility: hidden;
+  transition: transform 500ms;
+  transform-style: preserve-3d;
+  background: transparent;
+  border: 0;
+  height: 100px;
+
+}
+
+.container1:hover > .card{
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.container1 {
+  position: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.auction{
+  height: 100px;
+  width: 100px;
+  padding: 5px;
+  border-radius: 20%;
+  background-color: #e2b24c;
+  border-color: #e2b24c;
+  border-width: 2px;
+  border-style:solid;
+}
+
+.plus{
+  height: 100px;
+  width: 100px;
+  transform: translateY(-100px);
+  padding: 15px;
+  border-radius: 20%;
+  background-color: #282A3A;
+} 
+
+.textStyle {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  position: absolute;
+  top: 0.2em;
+  height: 5em;
+  width: 4em;
+
+}
+
+.logo img {
+  object-fit: cover;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.logoText{
+  position: relative;
+  justify-content: center;
+  font-size: 25px;
+  font-family: "Pinyon_Script", sans-serif;
+  font-family: PinyonFont;
+  color: #e2b24c;
+  z-index: 1110;
+  left: 130px;  
+}
+
+
+
+
+
+.modalDiv{
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display:flex;
+  background-size:cover;
+}
+
+.modalImage{
+  height: 90%;
+  width: 90%;
+  margin-top: 4%;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.5);
+}
+
+.contact-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.contact-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-container li {
+  margin-bottom: 10px;
+}
+
+.contact-container li strong {
+  display: inline-block;
+  width: 80px;
+  font-weight: bold;
+}
+
+.contact-container li span {
+  display: inline-block;
+  width: calc(100% - 80px);
+}
+
+
+.contIcons{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  position: relative;
+  height: 150px;
+  width: 350px;
+  margin: 0 auto 2em;
+}
+
+
+.email, .whatsapp, .telephone, .exp{
+  flex-basis: 30%;
+  max-width: 100%;
+  transition: transform .5s;
+}
+
+.email, .whatsapp, .telephone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutSection{
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-position: center center;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  background-size: cover;
+  z-index: 1;
+  box-shadow: 
+  inset 0px 20px 15px -10px #555555,
+  inset 0px -20px 15px -10px #555555; 
+}
+
+.loading-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease-out, visibility 1s ease-out;
+  flex-direction: column;
+}
+
+.loading-text{
+  margin-top: 1em;
+  font-size: 4em;
+  text-shadow: 2px 4px 5px gray;
+  font-family: "Pinyon_Script", sans-serif;
+  font-family: PinyonFont;
+  color: #282A3A;
+  text-align: center
+}
+
+.loading-bar-logo {
+  width: 200px;
+  height: auto;
+  display: flex;
+  filter: drop-shadow(5px 5px 5px grey);
+}
+
+.loading-bar.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-bar-inner {
+  margin-top: 2vh;
+  height: 8px;
+  width: 50%;
+  max-width: 450px;
+  background-color: #e2b24c;
+  animation: loading-bar-animation 2s ease-in-out infinite;
+  border-radius: 100%;
+  filter: drop-shadow(5px 5px 5px grey);
+
+}
+
+@keyframes loading-bar-animation {
+  0% {
+    width: 0%;
+  }
+  80% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.modalButton {
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.7);
+}
+
+
+.email:hover, .whatsapp:hover, .telephone:hover{
+  transform: scale(1.5);
+}
+
+.contIconsSide{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  position: relative;
+  height: 200px;
+  width: 80px;
+  flex-direction: column;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.sidebarButton {
+  position:relative;
+  width: 40px;
+  height: 80px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background-color:#282A3A;
+  border: none;
+}
+
+.buttonText{
+  writing-mode: vertical-lr;
+  bottom: -10%;
+  right: -40%;
+  position: absolute;
+  text-justify: auto;
+  font-weight:400;
+  font-size: 20px;
+  color:#e2b24c;
+  font-style: italic;
+}
+
+.buttonText:hover{
+  color:#282A3A;
+}
+
+.sidebarButton:hover{
+  background-color:#e2b24c;
+}
+
+
+.containerButSide{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 420px;
+  width: 80px;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  z-index: 1500;
+}
+
+.canvasStyle{
+  max-height: 230px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  background-color: #282A3A ;
+}
+
+
+/* ------------------------------------------------------------ */
+
+
+
